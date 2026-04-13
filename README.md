@@ -2,17 +2,13 @@
 
 A collection of command-line tools.
 
-## Tools
-
-### [unbuffer](unbuffer)
+## Install
 
 ```bash
-mise use go:crdx.org/cmd/unbuffer
-go install crdx.org/cmd/unbuffer@latest
+mise use go:crdx.org/cmd/<name>
+go install crdx.org/cmd/<name>@latest
 ```
 
-Run a command with its output connected to a pseudo-terminal, forcing programs that check for a TTY to produce unbuffered, coloured output.
+## Tools
 
-```
-unbuffer <command> [args...]
-```
+- [unbuffer](unbuffer) — Run a command with its output connected to a pseudo-terminal, forcing programs that check for a TTY to produce unbuffered, coloured output.
