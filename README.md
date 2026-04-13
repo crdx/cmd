@@ -4,7 +4,7 @@ A collection of command-line tools.
 
 ## Tools
 
-### unbuffer
+### [unbuffer](unbuffer)
 
 ```bash
 mise use go:crdx.org/cmd/unbuffer
