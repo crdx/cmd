@@ -5,8 +5,8 @@ A collection of command-line tools.
 ## Install
 
 ```bash
-mise use go:crdx.org/cmd/<name>
-go install crdx.org/cmd/<name>@latest
+mise use go:crdx.org/cmd/$NAME
+go install crdx.org/cmd/$NAME@latest
 ```
 
 ## Tools
