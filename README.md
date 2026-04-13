@@ -11,4 +11,5 @@ go install crdx.org/cmd/$NAME@latest
 
 ## Tools
 
-- [unbuffer](unbuffer) — Run a command with its output connected to a pseudo-terminal, forcing programs that check for a TTY to produce unbuffered, coloured output.
+- [uc](uc) — Describe Unicode characters.
+- [unbuffer](unbuffer) — Force unbuffered, coloured output from commands.
