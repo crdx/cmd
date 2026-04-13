@@ -1,6 +1,6 @@
 # Changelog
 
-## Next
+## v1.11.0
 
 - uc: initial release
 
