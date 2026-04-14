@@ -1,3 +1,5 @@
+// Bash completion: ../cmdctl/completions/unbuffer.bash
+
 package main
 
 import (
