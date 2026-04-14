@@ -1,3 +1,5 @@
+// Bash completion: ../cmdctl/completions/uchar.bash
+
 package main
 
 import (
