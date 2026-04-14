@@ -5,7 +5,7 @@ Run a command with its output connected to a pseudo-terminal, forcing programs t
 ## Install
 
 ```bash
-mise use go:crdx.org/cmd/unbuffer
+mise use -g go:crdx.org/cmd/unbuffer
 go install crdx.org/cmd/unbuffer@latest
 ```
 

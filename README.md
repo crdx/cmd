@@ -5,7 +5,7 @@ A collection of command-line tools.
 ## Install
 
 ```bash
-mise use go:crdx.org/cmd/$NAME
+mise use -g go:crdx.org/cmd/$NAME
 go install crdx.org/cmd/$NAME@latest
 ```
 
