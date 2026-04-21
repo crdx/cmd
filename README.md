@@ -15,5 +15,5 @@ go install crdx.org/cmd/$NAME@latest
 
 ## Tools
 
-- [uc](uc) — Describe Unicode characters.
+- [uchar](uchar) — Describe Unicode characters.
 - [unbuffer](unbuffer) — Force unbuffered, coloured output from commands.
