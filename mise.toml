@@ -1,3 +1,4 @@
 [tools]
 "go:crdx.org/cmd/uchar" = "main"
 "go:crdx.org/cmd/unbuffer" = "main"
+golangci-lint = "latest"
