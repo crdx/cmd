@@ -7,10 +7,10 @@ BUILD_DIR := "bin"
 help:
     just --list --unsorted --list-submodules
 
-build name:
+build-bin name:
     go build -o {{ BUILD_DIR }}/{{ name }} ./{{ name }}/
 
-build-all:
+build:
     #!/bin/bash
     set -euo pipefail
     for DIR in */; do
