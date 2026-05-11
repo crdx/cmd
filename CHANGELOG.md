@@ -1,9 +1,9 @@
 # Changelog
 
-## v1.11.0
+## [1.11.0] - 2026-04-13
 
 - uc: initial release
 
-## v1.10.0
+## [1.10.0] - 2026-04-13
 
 - unbuffer: initial release
