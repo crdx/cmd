@@ -11,7 +11,7 @@ go install crdx.org/cmd/uchar@latest
 
 ## Usage
 
-```
+```bash
 uchar <char>...
 echo <chars> | uchar
 ```
