@@ -1,8 +1,9 @@
 # Changelog
 
-## Next
+## [1.12.0] - 2026-05-14
 
 - ver: initial release
+- uchar: rename from uc
 
 ## [1.11.0] - 2026-04-13
 

@@ -3,5 +3,5 @@ set -euo pipefail
 
 NEW_VERSION=$1
 
-git add CHANGELOG.md
+git add -A
 git commit -m "Release v$NEW_VERSION"
