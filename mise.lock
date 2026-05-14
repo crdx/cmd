@@ -8,6 +8,10 @@ backend = "go:crdx.org/cmd/uchar"
 version = "main"
 backend = "go:crdx.org/cmd/unbuffer"
 
+[[tools."go:crdx.org/cmd/ver"]]
+version = "1.12.0"
+backend = "go:crdx.org/cmd/ver"
+
 [[tools.golangci-lint]]
 version = "2.11.4"
 backend = "aqua:golangci/golangci-lint"
