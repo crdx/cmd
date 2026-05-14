@@ -19,3 +19,4 @@ The README in the root directory of each tool has tool-specific documentation.
 
 - [uchar](uchar) — Describe Unicode characters.
 - [unbuffer](unbuffer) — Force unbuffered, coloured output from commands.
+- [ver](ver) — Bump and tag (sem)versions.

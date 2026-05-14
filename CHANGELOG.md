@@ -1,5 +1,9 @@
 # Changelog
 
+## Next
+
+- ver: initial release
+
 ## [1.11.0] - 2026-04-13
 
 - uc: initial release
