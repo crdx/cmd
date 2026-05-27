@@ -18,11 +18,13 @@ jobs:
               with:
                   go-version-file: go.mod
 
+            - name: Install just
+              run: curl --proto '=https' --tlsv1.2 -sSf https://just.systems/install.sh | bash -s -- --tag 1.50.0 --to /usr/local/bin
+
             - name: Extract changelog
               id: changelog
               run: |
-                  VERSION="${GITHUB_REF_NAME#v}"
-                  BODY=$(awk "/^## \[${VERSION}\]/{found=1; next} /^## \[/{if(found) exit} found{print}" CHANGELOG.md)
+                  BODY=$(just release::notes "${GITHUB_REF_NAME}")
                   {
                       echo "body<<EOF"
                       echo "$BODY"
@@ -38,4 +40,6 @@ jobs:
                   BODY: ${{ steps.changelog.outputs.body }}
 
             - name: Warm Go proxy
-              run: GOPROXY=proxy.golang.org go list -m "crdx.org/cmd@${GITHUB_REF_NAME}"
+              run: GOPROXY=proxy.golang.org go list -m "${MODULE_PATH}@${GITHUB_REF_NAME}"
+              env:
+                  MODULE_PATH: crdx.org/cmd
