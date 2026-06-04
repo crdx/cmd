@@ -1,9 +1,7 @@
-mod release
-
 set quiet := true
-set shell := ["bash", "-cu", "-o", "pipefail"]
+set shell := ['bash', '-cu', '-o', 'pipefail']
 
-BUILD_DIR := "bin"
+BUILD_DIR := 'bin'
 
 [private]
 help:
@@ -24,7 +22,7 @@ build:
     done
 
 clean:
-    rm -fv .bin/*
+    rm -fv {{ BUILD_DIR }}/*
 
 check:
     go build ./...
