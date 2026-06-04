@@ -24,6 +24,9 @@ build:
 clean:
     rm -fv {{ BUILD_DIR }}/*
 
+dev:
+    watchexec -e go -- just build
+
 check:
     go build ./...
     go test ./...
