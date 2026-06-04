@@ -16,11 +16,16 @@ $ go install crdx.org/cmd/ver@latest
 ## Usage
 
 ```
-ver                          # show latest version
-ver major [--ref REF]        # increment major version
-ver minor [--ref REF]        # increment minor version
-ver patch [--ref REF]        # increment patch version
-ver <version> [--ref REF]    # tag an explicit version (without 'v' prefix)
+Usage:
+    ver [options] (major | minor | patch) [--ref REF]
+    ver [options] <version> [--ref REF]
+    ver
+
+Increment the current version and tag it.
+If <version> is specified (without 'v' prefix) then use that instead.
+
+Options:
+    -r, --ref REF    Ref to tag [default: HEAD]
 ```
 
 ## Examples
