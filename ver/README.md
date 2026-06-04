@@ -9,8 +9,8 @@ Supports pre-version and post-version hook scripts (`hooks/pre-version` and `hoo
 ## Install
 
 ```bash
-$ mise use -g go:crdx.org/cmd/ver
-$ go install crdx.org/cmd/ver@latest
+mise use -g go:crdx.org/cmd/ver
+go install crdx.org/cmd/ver@latest
 ```
 
 ## Usage
@@ -31,21 +31,21 @@ Options:
 ## Examples
 
 ```bash
-$ ver
-Latest version: v1.11.0
+ver
+# Latest version: v1.11.0
 
-$ ver patch
-Old version: v1.11.0
-New version: v1.11.1
+ver patch
+# Old version: v1.11.0
+# New version: v1.11.1
 
-$ ver minor
-Old version: v1.11.0
-New version: v1.12.0
+ver minor
+# Old version: v1.11.0
+# New version: v1.12.0
 
-$ ver 2.0.0
-New version: v2.0.0
+ver 2.0.0
+# New version: v2.0.0
 
-$ ver patch --ref abc1234
-Old version: v1.11.0
-New version: v1.11.1
+ver patch --ref abc1234
+# Old version: v1.11.0
+# New version: v1.11.1
 ```
