@@ -36,7 +36,7 @@ func run() int {
 
 	defer func() { _ = ptyMaster.Close() }()
 
-	termios, err := unix.IoctlGetTermios(int(tty.Fd()), unix.TCGETS) //nolint:gosec
+	termios, err := unix.IoctlGetTermios(int(tty.Fd()), unix.TCGETS)
 	if err != nil {
 		_ = tty.Close()
 		fmt.Fprintf(os.Stderr, "%s: failed to get termios: %v\n", name, err)
@@ -45,7 +45,7 @@ func run() int {
 
 	termios.Oflag &^= unix.OPOST
 
-	if err := unix.IoctlSetTermios(int(tty.Fd()), unix.TCSETS, termios); err != nil { //nolint:gosec
+	if err := unix.IoctlSetTermios(int(tty.Fd()), unix.TCSETS, termios); err != nil {
 		_ = tty.Close()
 		fmt.Fprintf(os.Stderr, "%s: failed to set termios: %v\n", name, err)
 		return 1
