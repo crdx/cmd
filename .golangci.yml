@@ -19,6 +19,7 @@ linters:
     - gocyclo
     - godot
     - godox
+    - gomodguard
     - inamedparam
     - ireturn
     - lll
