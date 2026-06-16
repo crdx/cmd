@@ -13,10 +13,23 @@ mise use -g go:crdx.org/cmd/$NAME
 go install crdx.org/cmd/$NAME@latest
 ```
 
+## Completions
+
+Install [cmdctl](cmdctl) and run `cmdctl install` to add the eval line to `~/.bashrc`, or add it manually:
+
+```bash
+eval "$(cmdctl generate bash)"
+```
+
+Bash completions are then provided for any tools on `PATH`. Completions activate for newly installed tools on the next shell startup.
+
+See the [cmdctl](cmdctl) README for more information about how shell completions are generated.
+
 ## Tools
 
 The README in the root directory of each tool has tool-specific documentation.
 
+- [cmdctl](cmdctl) — Self-referential management tool.
 - [uchar](uchar) — Describe Unicode characters.
 - [unbuffer](unbuffer) — Force unbuffered, coloured output from commands.
 - [ver](ver) — Bump and tag (sem)versions.
