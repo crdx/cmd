@@ -1,6 +1,8 @@
 set quiet := true
 set shell := ['bash', '-cu', '-o', 'pipefail']
 
+mod release
+
 BUILD_DIR := 'bin'
 
 [private]
