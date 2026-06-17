@@ -29,6 +29,7 @@ See the [cmdctl](cmdctl) README for more information about how shell completions
 
 The README in the root directory of each tool has tool-specific documentation.
 
+- [chronic](chronic) — Run a command quietly unless it fails.
 - [cmdctl](cmdctl) — Self-referential management tool.
 - [uchar](uchar) — Describe Unicode characters.
 - [unbuffer](unbuffer) — Force unbuffered, coloured output from commands.

@@ -2,6 +2,7 @@
 
 ## Next
 
+- chronic: initial release
 - cmdctl: initial release
 
 ## [1.12.0] - 2026-05-14

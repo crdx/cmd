@@ -1,4 +1,5 @@
 [tools]
+"go:crdx.org/cmd/chronic" = "latest"
 "go:crdx.org/cmd/uchar" = "latest"
 "go:crdx.org/cmd/unbuffer" = "latest"
 "go:crdx.org/cmd/ver" = "latest"
