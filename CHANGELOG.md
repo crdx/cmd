@@ -1,6 +1,6 @@
 # Changelog
 
-## Next
+## [1.13.0] - 2026-06-17
 
 - chronic: initial release
 - cmdctl: initial release
