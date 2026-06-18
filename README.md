@@ -13,6 +13,10 @@ mise use -g go:crdx.org/cmd/$NAME
 go install crdx.org/cmd/$NAME@latest
 ```
 
+## Versioning
+
+A single tag versions the whole module, so every tool shares one version. Version numbers follow `1.x` where `x` is an incrementing integer, with `2.x` reserved for some unknown future situation that will warrant it. Tags carry a trailing `.0` (`1.13.0`, `1.14.0`, ...) only because Go modules require three-part semver; the patch component is always zero and means nothing.
+
 ## Completions
 
 Install [cmdctl](cmdctl) and run `cmdctl install` to add the eval line to `~/.bashrc`, or add it manually:
