@@ -25,6 +25,6 @@ Usage:
     cmdctl install bash
 
 Commands:
-    generate bash    Generate bash completions for crdx.org/cmd tools on PATH
-    install bash       Add eval line to ~/.bashrc
+    generate bash    Generate Bash completions for all tools on PATH
+    install bash     Add generated script evaluation line to ~/.bashrc
 ```
