@@ -5,7 +5,6 @@ package main
 import (
 	"fmt"
 
-	"crdx.org/cmd/pkg/sh"
 	"crdx.org/col"
 	"crdx.org/duckopt/v2"
 	"crdx.org/logger"
@@ -39,8 +38,12 @@ func main() {
 	logger.InitStderr()
 	col.Init()
 
-	if !sh.Cmd("git", "status", "--short").Quiet().Success() {
+	status, err := workingTreeStatus(".")
+	if err != nil {
 		logger.Fatal("need to be in a git repository")
+	}
+	if status != "" {
+		logger.Fatal("working tree is not clean:\n%s", status)
 	}
 
 	if opts.Version != "" {
@@ -50,6 +53,7 @@ func main() {
 		}
 
 		newTag := version.Tag()
+		ensureTagCanBeCreated(newTag, opts.Ref)
 		fmt.Println(col.Yellow("New version: %s", newTag))
 		execHook(preVersionHook, newTag, "")
 		createTag(newTag, opts.Ref)
@@ -78,12 +82,26 @@ func main() {
 		}
 
 		newTag := newVersion.Tag()
+		ensureTagCanBeCreated(newTag, opts.Ref)
 		fmt.Println(col.Yellow("New version: %s", newTag))
 		execHook(preVersionHook, newTag, oldTag)
 		createTag(newTag, opts.Ref)
 		execHook(postVersionHook, newTag, oldTag)
 	} else {
 		showLatest()
+	}
+}
+
+func ensureTagCanBeCreated(tag string, ref string) {
+	exists, err := tagExists(".", tag)
+	if err != nil {
+		logger.Fatal("could not inspect existing tags: %v", err)
+	}
+	if exists {
+		logger.Fatal("tag %s already exists", tag)
+	}
+	if err := verifyRef(".", ref); err != nil {
+		logger.Fatal("ref %s is not a commit", ref)
 	}
 }
 
