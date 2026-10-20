@@ -2,6 +2,11 @@
 
 ## [Next]
 
+## [1.14.0] — 2026-10-21
+
+- ver: refuse release if tree is dirty
+- ver: reject existing tags and invalid refs before pre-version hook
+
 ## [1.13.0] — 2026-06-17
 
 - chronic: initial release
